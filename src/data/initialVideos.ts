@@ -1,0 +1,172 @@
+import { Video, AdConfig } from '../types';
+
+export const INITIAL_VIDEOS: Video[] = [
+  {
+    id: 'vid-1',
+    title: 'Cyberpunk Tokyo: Ultra-Realistic Unreal Engine 5.4 Tech Showcase',
+    description: 'A deep dive into next-gen ray-traced lighting, Nanite geometry streaming, and real-time reflections in modern city generation.',
+    category: 'Tech',
+    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80',
+    duration: '12:14',
+    durationSeconds: 734,
+    views: 148200,
+    likes: 8930,
+    isFeatured: true,
+    createdAt: '2 hours ago',
+    channelName: 'NextGen Graphics',
+    channelAvatar: 'https://api.dicebear.com/7.x/bottts/svg?seed=NextGen',
+    tags: ['Tech', 'Gaming', '3D', 'UnrealEngine']
+  },
+  {
+    id: 'vid-2',
+    title: 'Elden Ring DLC: Defeating the Final Boss Without Taking Damage (Solo)',
+    description: 'Flawless no-hit combat run breakdown, talisman setup, parry timing masterclass, and weapon scaling optimization.',
+    category: 'Gaming',
+    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=1200&q=80',
+    duration: '07:42',
+    durationSeconds: 462,
+    views: 89400,
+    likes: 6240,
+    isFeatured: false,
+    createdAt: '5 hours ago',
+    channelName: 'PixelKnight',
+    channelAvatar: 'https://api.dicebear.com/7.x/bottts/svg?seed=PixelKnight',
+    tags: ['Gaming', 'Walkthrough', 'Action']
+  },
+  {
+    id: 'vid-3',
+    title: 'Big Buck Bunny: 4K Open Source Animation Masterpiece',
+    description: 'The iconic open-movie project by the Blender Institute following a giant rabbit who stands up to forest bullies.',
+    category: 'Cinema',
+    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=80',
+    duration: '09:56',
+    durationSeconds: 596,
+    views: 341000,
+    likes: 24100,
+    isFeatured: true,
+    createdAt: '1 day ago',
+    channelName: 'Blender Cinema',
+    channelAvatar: 'https://api.dicebear.com/7.x/bottts/svg?seed=Blender',
+    tags: ['Cinema', 'Animation', '3D', 'OpenSource']
+  },
+  {
+    id: 'vid-4',
+    title: 'How to Build and Monetize a Telegram Mini App in 2026',
+    description: 'Step-by-step developer guide on TON blockchain integration, WebApp SDK events, Adsgram monetization, and viral channel growth.',
+    category: 'Tutorials',
+    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80',
+    duration: '15:20',
+    durationSeconds: 920,
+    views: 64200,
+    likes: 4890,
+    isFeatured: false,
+    createdAt: '2 days ago',
+    channelName: 'Telegram Dev Hub',
+    channelAvatar: 'https://api.dicebear.com/7.x/bottts/svg?seed=TgHub',
+    tags: ['Tutorials', 'Telegram', 'TON', 'Coding']
+  },
+  {
+    id: 'vid-5',
+    title: 'Sintel: The Dragon Hunt - Cinematic Fantasy Short Film',
+    description: 'An emotional journey of a lonely young girl searching the snowy mountains for her baby dragon companion.',
+    category: 'Cinema',
+    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80',
+    duration: '08:52',
+    durationSeconds: 532,
+    views: 215000,
+    likes: 19800,
+    isFeatured: false,
+    createdAt: '3 days ago',
+    channelName: 'Blender Cinema',
+    channelAvatar: 'https://api.dicebear.com/7.x/bottts/svg?seed=Sintel',
+    tags: ['Cinema', 'Fantasy', 'CGI', 'Adventure']
+  },
+  {
+    id: 'vid-6',
+    title: 'Extreme Drift & Speed Rally Championship: In-Car Telemetry',
+    description: 'High-octane dirt track racing through steep mountain hairpins with real-time gear shifting and RPM telemetry.',
+    category: 'Trending',
+    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80',
+    duration: '06:18',
+    durationSeconds: 378,
+    views: 95400,
+    likes: 7120,
+    isFeatured: false,
+    createdAt: '4 days ago',
+    channelName: 'Apex Racing',
+    channelAvatar: 'https://api.dicebear.com/7.x/bottts/svg?seed=Apex',
+    tags: ['Trending', 'Motorsport', 'Drift', 'Speed']
+  },
+  {
+    id: 'vid-7',
+    title: 'Lo-Fi Coding Beats & Cozy Midnight City Skyline',
+    description: 'Relaxing ambient melodies, gentle rain sounds, and neon city vibes designed for deep work, study, and flow state.',
+    category: 'Music',
+    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80',
+    duration: '22:45',
+    durationSeconds: 1365,
+    views: 412000,
+    likes: 35100,
+    isFeatured: false,
+    createdAt: '5 days ago',
+    channelName: 'Chillwave Station',
+    channelAvatar: 'https://api.dicebear.com/7.x/bottts/svg?seed=Chillwave',
+    tags: ['Music', 'LoFi', 'Ambient', 'Chill']
+  },
+  {
+    id: 'vid-8',
+    title: 'Top 5 Smartphone Camera Innovations You Missed This Year',
+    description: 'Periscope prisms, 1-inch sensor dynamic range tests, optical continuous zoom, and AI computational portrait rendering compared.',
+    category: 'Tech',
+    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=80',
+    duration: '11:05',
+    durationSeconds: 665,
+    views: 122000,
+    likes: 9340,
+    isFeatured: false,
+    createdAt: '6 days ago',
+    channelName: 'TechWave Reviews',
+    channelAvatar: 'https://api.dicebear.com/7.x/bottts/svg?seed=TechWave',
+    tags: ['Tech', 'Gadgets', 'Cameras', 'Mobile']
+  }
+];
+
+export const DEFAULT_AD_CONFIG: AdConfig = {
+  enabled: true,
+  sponsorName: 'TON Rocket & Adsgram Network',
+  adTitle: 'Earn Crypto & Multiply Your Telegram Channel Reach',
+  adDescription: 'The official Web3 monetization platform built exclusively for Telegram Mini Apps. Instant daily payouts in TON and USDT.',
+  mediaUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
+  ctaText: 'Explore Adsgram · Free Access',
+  ctaUrl: 'https://adsgram.ai',
+  skipDelaySeconds: 5,
+  totalAdDurationSeconds: 15,
+  networkType: 'adsgram'
+};
+
+export const PRESET_THUMBNAILS = [
+  'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80',
+  'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=1200&q=80',
+  'https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=80',
+  'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80',
+  'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80',
+  'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80',
+  'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80',
+  'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=80'
+];
+
+export const PRESET_VIDEO_STREAMS = [
+  { name: 'Tears of Steel (Sci-Fi / 12m)', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4' },
+  { name: 'Big Buck Bunny (Animation / 10m)', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' },
+  { name: 'Sintel (Fantasy / 9m)', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4' },
+  { name: 'For Bigger Blazes (Action / 7m)', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4' },
+  { name: 'For Bigger Escapes (Travel / 5m)', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4' }
+];
